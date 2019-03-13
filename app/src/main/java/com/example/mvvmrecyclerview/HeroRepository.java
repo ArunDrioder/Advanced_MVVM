@@ -10,7 +10,7 @@ import io.reactivex.schedulers.Schedulers;
 
 public class HeroRepository {
 
-    public MutableLiveData<ArrayList<MainVM>> arrayListMutableLiveData = new MutableLiveData<>();
+    private MutableLiveData<ArrayList<MainVM>> arrayListMutableLiveData = new MutableLiveData<>();
     private ArrayList<MainVM> arrayList;
 
     public HeroRepository() {
@@ -40,17 +40,19 @@ public class HeroRepository {
 
                 for (int i = 0; i<heroPojos.size(); i++)
                 {
-                    heroPojo = new HeroPojo(heroPojos.get(i).name,
-                            heroPojos.get(i).realname,
-                            heroPojos.get(i).team,
-                            heroPojos.get(i).firstappearance,
-                            heroPojos.get(i).createdby,
-                            heroPojos.get(i).publisher,
-                            heroPojos.get(i).imageurl
+                    heroPojo = new HeroPojo(
+                            heroPojos.get(i).getName(),
+                            heroPojos.get(i).getRealname(),
+                            heroPojos.get(i).getTeam(),
+                            heroPojos.get(i).getFirstappearance(),
+                            heroPojos.get(i).getCreatedby(),
+                            heroPojos.get(i).getPublisher(),
+                            heroPojos.get(i).getImageurl()
                     );
                     mainVM = new MainVM(heroPojo);
                     arrayList.add(mainVM);
                 }
+
 
                 arrayListMutableLiveData.setValue(arrayList);
 

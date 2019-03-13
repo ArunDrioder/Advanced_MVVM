@@ -7,31 +7,31 @@ public class HeroPojo {
 
     @SerializedName("name")
     @Expose
-    public String name;
+    private String name;
 
     @SerializedName("realname")
     @Expose
-    public String realname;
+    private String realname;
 
     @SerializedName("team")
     @Expose
-    public String team;
+    private String team;
 
     @SerializedName("firstappearance")
     @Expose
-    public String firstappearance;
+    private String firstappearance;
 
     @SerializedName("createdby")
     @Expose
-    public String createdby;
+    private String createdby;
 
     @SerializedName("publisher")
     @Expose
-    public String publisher;
+    private String publisher;
 
     @SerializedName("imageurl")
     @Expose
-    public String imageurl;
+    private String imageurl;
 
     public HeroPojo(String name, String realname, String team, String firstappearance, String createdby, String publisher, String imageurl) {
         this.name = name;
@@ -43,7 +43,33 @@ public class HeroPojo {
         this.imageurl = imageurl;
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public String getRealname() {
+        return realname;
+    }
+
+    public String getTeam() {
+        return team;
+    }
+
+    public String getFirstappearance() {
+        return firstappearance;
+    }
+
+    public String getCreatedby() {
+        return createdby;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public String getImageurl() {
+        return imageurl;
+    }
 }
 
 
